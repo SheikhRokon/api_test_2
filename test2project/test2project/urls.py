@@ -1,9 +1,9 @@
 
 from django.contrib import admin
-from django.urls import path
-from apiapp import views
+from django.urls import path,include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ggg', views.student_api),
+    path('',include('apiapp.urls')),
 ]
